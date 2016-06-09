@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="imgaedownloading" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uWk-Hq-KaH">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyTableViewCell" rowHeight="83" id="YUv-QJ-0tc" customClass="MyTableViewCell" customModule="imgaedownloading" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="83"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YUv-QJ-0tc" id="27O-ki-D5r">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="82"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="251" image="Screen Shot 2016-06-08 at 5.23.35 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="Q2u-1q-YKQ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="82"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="xXz-GG-A5a"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="TVg-iD-NdH">
+                                                    <rect key="frame" x="40" y="32" width="20" height="18"/>
+                                                </activityIndicatorView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="jskrr" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y42-ak-Aem">
+                                                    <rect key="frame" x="131" y="30" width="446" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="y42-ak-Aem" firstAttribute="leading" secondItem="Q2u-1q-YKQ" secondAttribute="trailing" constant="31" id="A3Y-Wb-DoC"/>
+                                                <constraint firstItem="Q2u-1q-YKQ" firstAttribute="top" secondItem="27O-ki-D5r" secondAttribute="top" id="ANt-V3-IbS"/>
+                                                <constraint firstItem="Q2u-1q-YKQ" firstAttribute="leading" secondItem="27O-ki-D5r" secondAttribute="leading" id="JRa-OR-go6"/>
+                                                <constraint firstItem="Q2u-1q-YKQ" firstAttribute="centerY" secondItem="TVg-iD-NdH" secondAttribute="centerY" id="MFQ-vn-iGh"/>
+                                                <constraint firstAttribute="bottom" secondItem="Q2u-1q-YKQ" secondAttribute="bottom" id="W9h-Lf-DyV"/>
+                                                <constraint firstItem="Q2u-1q-YKQ" firstAttribute="centerX" secondItem="TVg-iD-NdH" secondAttribute="centerX" id="bgI-Kk-23R"/>
+                                                <constraint firstItem="Q2u-1q-YKQ" firstAttribute="centerY" secondItem="y42-ak-Aem" secondAttribute="centerY" id="e9s-VE-E2l"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="activityIndicator" destination="TVg-iD-NdH" id="fn9-Kd-oBe"/>
+                                            <outlet property="imageView1" destination="Q2u-1q-YKQ" id="UQB-W0-jyY"/>
+                                            <outlet property="name" destination="y42-ak-Aem" id="pdv-Kk-5p9"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="WeW-pE-Eju"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="zOB-U6-F0A"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="uWk-Hq-KaH" secondAttribute="trailing" id="5pD-ir-Kek"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="uWk-Hq-KaH" secondAttribute="bottom" id="LQf-FK-arI"/>
+                            <constraint firstItem="uWk-Hq-KaH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="S52-m9-q6Z"/>
+                            <constraint firstItem="uWk-Hq-KaH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bfk-44-U08"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="uWk-Hq-KaH" id="aCt-aI-NsC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="195" y="304"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Screen Shot 2016-06-08 at 5.23.35 PM.png" width="59" height="39"/>
+    </resources>
+</document>
