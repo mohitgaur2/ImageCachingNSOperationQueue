@@ -9,7 +9,7 @@
 import UIKit
 
 class MyTableViewCell: UITableViewCell {
-
+    
     @IBOutlet var imageView1: UIImageView!
     @IBOutlet var name: UILabel!
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
@@ -18,27 +18,29 @@ class MyTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     
-    
+    /**
+     This Method is used to configure the cell, activation and deactivating the activity indicator, set image(data) in imageView.
+     
+     :parameter: data: NSData need to pass as argument
+     */
     func configurecell(data: NSData?){
-        self.activityIndicator.startAnimating()
-
         if let _ = data{
-           self.imageView1?.image = UIImage(data: data!)
-           self.activityIndicator.stopAnimating()
-           self.activityIndicator.hidden = true
-           self.activityIndicator.removeFromSuperview()
+            self.imageView1?.image = UIImage(data: data!)
+            self.activityIndicator.stopAnimating()
+            self.activityIndicator.hidden = true
+            self.activityIndicator.removeFromSuperview()
             
         }else{
             self.activityIndicator.hidden = false
+            self.activityIndicator.startAnimating()
         }
-        
     }
-
+    
 }
