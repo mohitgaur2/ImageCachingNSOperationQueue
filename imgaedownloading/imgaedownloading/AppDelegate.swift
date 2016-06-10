@@ -9,6 +9,8 @@
 import UIKit
 import CoreData
 
+public let cache = NSMutableDictionary() // For maintaining the cache at application level
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
